@@ -1,4 +1,5 @@
-# crimeproject-beta
+# Crime Project
+## Luyi Jin (lj1035), Siyuan Xiang (sx550), Daniel Amaranto (da1933)
 
 ### Setup
 1. Download csv version of [NYPD Complaint Data Historic Dataset](https://data.cityofnewyork.us/api/views/qgea-i56i/rows.csv?accessType=DOWNLOAD) and rename it as `crime.csv`.
