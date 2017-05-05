@@ -5,7 +5,7 @@ from operator import add
 from pyspark import SparkContext
 from csv import reader
 
-SAMPLE_NUM = 2000
+SAMPLE_NUM = 5000
 
 if __name__ == "__main__":
     sc = SparkContext()
