@@ -24,9 +24,11 @@ if __name__ == "__main__":
     lines = sc.textFile(sys.argv[1], 1)
     lines = lines.mapPartitions(lambda x: reader(x)).filter(lambda x: x[0] != 'CMPLNT_NUM')
 
-    results = lines.map(lambda x: lat_lon_to_zip(x[21], x[22], samples)) \
+    results = lines.map(lambda x: x + [lat_lon_to_zip(x[21], x[22], samples)]) \
+                   .map(lambda x: ["\"" + item + "\"" for item in x]) \
+                   .map(lambda x: ','.join(x)) \
 
-    results.saveAsTextFile('lat_lon_to_zip.out')
+    results.saveAsTextFile('crime_zip.csv')
 
     sc.stop()
 

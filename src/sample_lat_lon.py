@@ -5,7 +5,7 @@ from operator import add
 from pyspark import SparkContext
 from csv import reader
 
-SAMPLE_NUM = 100
+SAMPLE_NUM = 2000
 
 if __name__ == "__main__":
     sc = SparkContext()
@@ -18,8 +18,6 @@ if __name__ == "__main__":
                    .takeSample(True, num=SAMPLE_NUM, seed=1) \
 
     sc.parallelize(results).saveAsTextFile('sample_lat_lon.out')
-
-    #results.saveAsTextFile('sample_lat_lon.out')
 
     sc.stop()
 
