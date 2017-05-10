@@ -7,7 +7,7 @@
 
 ### Combine zipcode to crime dataset
 
-#### Sample GPS location frmo crime dataset
+#### Sample GPS location from crime dataset
 1. Run `spark-submit src/sample_lat_lon.py crime.csv`.
 2. Get samples `sample_lat_lon.out` from HDFS and put it in `results` folder.
 
