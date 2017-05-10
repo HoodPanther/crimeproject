@@ -38,3 +38,15 @@ Run these files from a folder that also contains PySpark output files in a subfo
 
 To run the visualizations of yearly data in Yearly_Crime.ipynb, the python file project_env.py should also 
 be contained in the same folder as the notebook.
+
+### Correlation and Regression Analysis
+The following packages were used:
+
+    import pandas as pd
+    import numpy as np
+    from sklearn import preprocessing
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+    from statsmodels.formula.api import ols
+    import statsmodels.api as sm
+    from statsmodels.stats.outliers_influence import variance_inflation_factor
